@@ -1,0 +1,52 @@
+$bg1: #673AB7
+$bg2: #512DA8
+$text-color: #f8f9fa
+
+=linear-gradient($bg1, $bg2)
+  background: $bg1
+  background: -webkit-linear-gradient($bg1, $bg2)
+  background: -o-linear-gradient($bg1, $bg2)
+  background: -moz-linear-gradient($bg1, $bg2)
+  background: linear-gradient($bg1, $bg2)
+=link-color ($link, $visit, $hover, $active)
+  color: $link
+  &:visited
+    color: $visit
+  &:hover
+    color: $hover
+  &:active
+    color: $active
+
+@media (max-width: 575px)
+  .content
+    width: 100%
+@media (min-width: 576px) and (max-width: 767px)
+  .content
+    width: 100%
+@media (min-width: 768px) and (max-width: 991px)
+  .content
+    width: 75%
+@media (min-width: 992px) and (max-width: 1199px)
+  .content
+    width: 75%
+@media (min-width: 1200px)
+  .content
+    width: 25%
+  
+html
+  height: 100%
+  body
+    height: 100%
+    font-family: 'Comfortaa', sans-serif
+    +linear-gradient($bg1, $bg2)
+    .content
+      height: 100%
+      .btn-outline-light
+        &:hover
+          color: $bg1
+          border-width: 1px
+      #created-by
+        +link-color($text-color, $text-color, $text-color, $text-color)
+        text-decoration: underline
+      hr
+        border: solid 1px white

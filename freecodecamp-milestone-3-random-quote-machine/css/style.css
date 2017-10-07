@@ -1,0 +1,50 @@
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+html .background, body .background {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("https://res.cloudinary.com/christiank/image/upload/c_crop,w_2736/v1505817203/adrian-pelletier-9455_ruxs0z.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+html .content, body .content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+html .btn-primary.raised, body .btn-primary.raised {
+  box-shadow: 0 3px 0 0 #0059B6;
+}
+html .btn-primary.raised:active, html .btn-primary.raised .active, body .btn-primary.raised:active, body .btn-primary.raised .active {
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+html .btn-success.raised, body .btn-success.raised {
+  box-shadow: 0 3px 0 0 #128C2D;
+}
+html .btn-success.raised:active, html .btn-success.raised .active, body .btn-success.raised:active, body .btn-success.raised .active {
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+html .card, body .card {
+  border: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+html .card .card-body, body .card .card-body {
+  padding: 25px;
+}
+html .icon-placeholder, body .icon-placeholder {
+  height: 30px;
+  width: 20px;
+}

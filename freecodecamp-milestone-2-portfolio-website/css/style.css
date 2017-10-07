@@ -1,0 +1,77 @@
+body {
+	padding-top: 50px;
+  position: relative;
+}
+nav.navbar.navbar-default.ck-navbar {
+  /*background-color: #2c3e50;*/
+  background-color: #000;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  font-family: "Raleway", sans-serif;
+  border: none;
+}
+.navbar-default div.navbar-collapse {
+  border-top:none;
+  box-shadow:none;
+}
+.navbar-nav li.active > a {
+   /*border-bottom:4px solid #1abc9c;*/
+   border-bottom:2px solid #ecf0f1;
+   /*color: #1abc9c !important;*/
+   color: #ecf0f1 !important;
+   /*background-color: #34495e !important;*/
+   background-color: #222 !important;
+}
+.nav.navbar-nav li > a, .navbar-default .navbar-header .navbar-brand {
+    color: #ecf0f1;    
+}
+.navbar-default .navbar-header .navbar-brand {
+  font-weight: 300 !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.nav.navbar-nav li > a:hover {
+  /*color: #16a085;*/
+  color: #ecf0f1;
+  background-color: #222;
+}
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  padding-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.24);
+  width: 100%;
+  height: 100%;
+}
+#ck-jumbotron {
+	margin-bottom: 0px;
+  padding-bottom: 7.5px;
+  padding-top: 7.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.images-all {
+  padding: 7.5px;
+}
+.navbar-toggle {
+  border: none;
+  outline: none;
+} 
+.navbar-default. > navbar-toggle:active {
+  background-color: #2c3e50;
+}
+.fa-stack.fa-lg.contact-icon {
+  display:inline;
+}
+a.ck-link-unstyled {
+  color:#333;
+  text-decoration:none;
+}

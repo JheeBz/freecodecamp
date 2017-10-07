@@ -1,0 +1,60 @@
+@media (max-width: 575px) {
+  .content {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .content {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    width: 25%;
+  }
+}
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  font-family: "Comfortaa", sans-serif;
+  background: #673AB7;
+  background: -webkit-linear-gradient(#673AB7, #512DA8);
+  background: -o-linear-gradient(#673AB7, #512DA8);
+  background: -moz-linear-gradient(#673AB7, #512DA8);
+  background: linear-gradient(#673AB7, #512DA8);
+}
+html body .content {
+  height: 100%;
+}
+html body .content .btn-outline-light:hover {
+  color: #673AB7;
+  border-width: 1px;
+}
+html body .content #created-by {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+html body .content #created-by:visited {
+  color: #f8f9fa;
+}
+html body .content #created-by:hover {
+  color: #f8f9fa;
+}
+html body .content #created-by:active {
+  color: #f8f9fa;
+}
+html body .content hr {
+  border: solid 1px white;
+}

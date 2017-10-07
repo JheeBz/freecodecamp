@@ -1,0 +1,64 @@
+// $bg1: #141E30
+// $bg2: #243B55
+
+// $bg1: #fc4a1a
+// $bg2: #f7b733
+// $font-colour1: #fff
+$font: 'Montserrat', sans-serif
+
+=linear-gradient($bg1, $bg2)
+  background: $bg1
+  background: -webkit-linear-gradient($bg1, $bg2)
+  background: -o-linear-gradient($bg1, $bg2)
+  background: -moz-linear-gradient($bg1, $bg2)
+  background: linear-gradient($bg1, $bg2)
+html
+  height: 100%
+  body
+    font-family: $font
+    height: 100%
+    .navbar
+      padding-top: 15px
+      padding-bottom: 15px
+      a.navbar-brand
+        font-size: 32px
+        font-weight: 300
+    #search
+      padding-bottom: 15px
+      input.form-control
+        border-radius: 0px
+        font-size: 14px
+        font-weight: 300
+    button.btn-lg
+      border-radius: 0px
+      font-size: 14px
+      font-weight: 300
+      .icon-container
+        height: 24px
+        width: 24px
+    .no-gutter
+      padding-left: 0px
+      padding-right: 0px
+    .result-item
+      margin-top: 15px
+      margin-bottom: 15px
+      border: 1px solid rgba(0, 0, 0, 0.15)
+      &:hover
+        border-color: #007bff
+        border-left: 5px solid #007bff
+        margin-left: -4px
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px 0px
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+      a
+        color: #000
+        text-decoration: none
+    .wiki-text
+      padding: 15px
+      h5
+        font-weight: 300
+      p.lead.description
+        font-size: 14px
+  #created-by
+    font-weight: 300
+    a
+      color: #000
