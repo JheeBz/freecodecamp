@@ -1,0 +1,20 @@
+{
+  "name": "freecodecamp",
+  "version": "1.0.0",
+  "description": "Collection of FreeCodeCamp challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JheeBz/freecodecamp.git",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "author": "christian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JheeBz/freecodecamp/issues"
+  },
+  "homepage": "https://github.com/JheeBz/freecodecamp#readme"
+}

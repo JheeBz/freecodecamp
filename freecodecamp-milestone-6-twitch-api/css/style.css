@@ -1,4 +1,7 @@
-html body {
-  height: 100%;
-  font-family: "Raleway", sans-serif;
-}
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    font-family: "Raleway", sans-serif; }
+  html #search input #search-field {
+    border-radius: 45px; }
