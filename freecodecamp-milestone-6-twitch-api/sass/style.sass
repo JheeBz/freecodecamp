@@ -1,11 +1,22 @@
-$font-stack: 'Raleway', sans-serif
+$font-stack: 'Roboto', sans-serif
 
 html
   height: 100%
   body
     height: 100%
     font-family: $font-stack
-  #search
-    input
-      #search-field
+    background-color: rgba(0,0,0,0.05)
+  .container
+    #search
+      input.form-control
         border-radius: 45px
+        font-size: 14px
+        font-weight: 300
+    .list-group
+      font-size: 14px
+      .list-group-item
+        padding: 15px
+    .md-card
+      background: #fff
+      border-radius: 1px
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
