@@ -8,10 +8,10 @@ html {
     border-radius: 45px;
     font-size: 14px;
     font-weight: 300; }
-  html .container .list-group {
-    font-size: 14px; }
-    html .container .list-group .list-group-item {
-      padding: 15px; }
+  html .container .list-group .list-group-item {
+    padding: 15px;
+    border-right: 0;
+    border-left: 0; }
   html .container .md-card {
     background: #fff;
     border-radius: 1px;

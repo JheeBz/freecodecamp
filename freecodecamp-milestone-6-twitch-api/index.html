@@ -10,12 +10,12 @@
   </head>
   <body>
     <div class="container py-3 h-100">
-      <div class="md-card px-3 py-3">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="text-center">Streamers</h3>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">Streamers</h3>
         </div>
+      </div>
+      <div class="md-card px-3 py-3">
         <div class="row">
           <div class="col-md-12">
               <form id="search">
@@ -23,12 +23,29 @@
               </form>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-group" role="group" aria-label="online filter">
+              <button type="button" class="btn btn-outline-secondary">All</button>
+              <button type="button" class="btn btn-outline-secondary">Online</button>
+              <button type="button" class="btn btn-outline-secondary">Offline</button>
+            </div>
+          </div>
+        </div>
         <div class="row streamers">
           <div class="col-md-12">
             <ul class="list-group">
-              <li class="list-group-item streamer"><img src="http://via.placeholder.com/60x60" class="img-responsive rounded-circle streamer-image"></img><span class="streamer-name">Streamer One</span>
-                    </li>
-              <li class="list-group-item streamer">Streamer Two</li>
+              <li class="list-group-item streamer">
+                <img src="http://via.placeholder.com/50x50" class="img-responsive rounded-circle streamer-image"></img>
+                <span class="streamer-name">Streamer One</span>
+                <span class="badge badge-success badge-pill">Online</span>
+                <small class="text-secondary">Playing X</small>
+              </li>
+              <li class="list-group-item streamer">
+                <img src="http://via.placeholder.com/50x50" class="img-responsive rounded-circle streamer-image"></img>
+                <span class="streamer-name">Streamer Two</span>
+                <span class="streamer-status badge badge-secondary badge-pill">Offline</span>
+              </li>
               <li class="list-group-item streamer">Streamer Three</li>
               <li class="list-group-item streamer">Streamer Four</li>
               <li class="list-group-item streamer">Streamer Five</li>
