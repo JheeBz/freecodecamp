@@ -9,11 +9,12 @@ html {
   html .container #search .search-icon {
     position: absolute;
     display: flex;
-    margin-left: 15px;
+    margin-left: 10px;
     align-items: center;
-    height: 38px; }
+    height: 40px;
+    color: #8a9096; }
   html .container #search input.form-control {
-    padding-left: 40px;
+    padding-left: 35px;
     border-radius: 45px;
     font-size: 14px;
     font-weight: 300; }
@@ -22,7 +23,7 @@ html {
     border-right: 0;
     border-left: 0; }
   html .container .btn-group .btn {
-    width: 90px;
+    width: 80px;
     border-radius: 45px; }
   html .container .md-card {
     background: #fff;
