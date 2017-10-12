@@ -19,17 +19,30 @@
         <div class="row">
           <div class="col-md-12">
               <form id="search">
-                <input id ="search-field" type="text" class="form-control form-control-lg mb-3" placeholder="Search">
+                <i class="search-icon">quack</i>
+                <input id ="search-field" type="text" class="form-control form-control-lg mb-2" placeholder="Search">
               </form>
+<!--
+            <div class="search">
+              <div class="input-group">
+                <span class="input-group-addon">S</span>
+                <input id ="search-field" type="text" class="form-control form-control-lg mb-2" placeholder="Search">
+              </div>
+            </div>
+-->
+            
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="btn-group" role="group" aria-label="online filter">
-              <button type="button" class="btn btn-outline-secondary">All</button>
-              <button type="button" class="btn btn-outline-secondary">Online</button>
-              <button type="button" class="btn btn-outline-secondary">Offline</button>
+            <div class="text-center">
+              <div class="btn-group mb-2" role="group" aria-label="online filter">
+              <button type="button" class="btn btn-outline-primary active ">All</button>
+              <button type="button" class="btn btn-outline-primary">Online</button>
+              <button type="button" class="btn btn-outline-primary">Offline</button>
+              </div>
             </div>
+            
           </div>
         </div>
         <div class="row streamers">
@@ -38,15 +51,19 @@
               <li class="list-group-item streamer">
                 <img src="http://via.placeholder.com/50x50" class="img-responsive rounded-circle streamer-image"></img>
                 <span class="streamer-name">Streamer One</span>
-                <span class="badge badge-success badge-pill">Online</span>
-                <small class="text-secondary">Playing X</small>
+                <span class="badge badge-success badge-pill pull-right">Online</span>
+                <small class="text-secondary">Playing StarCraft II</small>
               </li>
               <li class="list-group-item streamer">
                 <img src="http://via.placeholder.com/50x50" class="img-responsive rounded-circle streamer-image"></img>
                 <span class="streamer-name">Streamer Two</span>
                 <span class="streamer-status badge badge-secondary badge-pill">Offline</span>
               </li>
-              <li class="list-group-item streamer">Streamer Three</li>
+              <li class="list-group-item streamer">
+                <img src="http://via.placeholder.com/50x50" class="img-responsive rounded-circle streamer-image"></img>
+                <span class="streamer-name">Streamer Three</span>
+                <span class="streamer-status badge badge-secondary badge-pill">Offline</span>
+              </li>
               <li class="list-group-item streamer">Streamer Four</li>
               <li class="list-group-item streamer">Streamer Five</li>
               <li class="list-group-item streamer">Streamer Six</li>

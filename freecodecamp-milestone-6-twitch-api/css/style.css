@@ -4,7 +4,16 @@ html {
     height: 100%;
     font-family: "Roboto", sans-serif;
     background-color: rgba(0, 0, 0, 0.05); }
+  html h2 {
+    color: #565656; }
+  html .container #search .search-icon {
+    position: absolute;
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    height: 38px; }
   html .container #search input.form-control {
+    padding-left: 40px;
     border-radius: 45px;
     font-size: 14px;
     font-weight: 300; }
@@ -12,7 +21,10 @@ html {
     padding: 15px;
     border-right: 0;
     border-left: 0; }
+  html .container .btn-group .btn {
+    width: 90px;
+    border-radius: 45px; }
   html .container .md-card {
     background: #fff;
-    border-radius: 1px;
+    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
