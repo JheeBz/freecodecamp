@@ -1,70 +1,91 @@
 feather.replace();
 
-// axios.defaults.baseUrl = 'https://wind-bow.glitch.me/twitch-api';
 const baseUrl = 'https://wind-bow.glitch.me/twitch-api';
 const streamersToDisplay = [
-  "esl_sc2", 
-  "OgamingSC2",
-  "cretetion",
-  "freecodecamp",
-  "storbeck",
-  "habathcx",
-  "RobotCaleb",
-  "noobs2ninjas"
+  'esl_sc2', 
+  'OgamingSC2',
+  'cretetion',
+  'freecodecamp',
+  'storbeck',
+  'habathcx',
+  'RobotCaleb',
+  'noobs2ninjas'
 ];
 
 const getStreamers = (streamers) => {
   let streamerData = [];
-  for (let i = 0; i < streamers.length; i++) {
-    $.getJSON(`${baseUrl}/streams/${streamers[i]}?callback=?`, (response) => {
+
+  // for (let i = 0; i < streamers.length; i += 1) {
+  streamerData = streamers.map((streamer) => {
+    $.getJSON(`${baseUrl}/streams/${streamer}?callback=?`, (response) => {
       // console.log(response);
-      if (response["stream"] === null) {
+      if (response.stream === null) {
         streamerData.push({
-          name: streamers[i],
+          name: streamer,
           status: 'Offline',
           game: null,
           image: null
         });
-        console.log(streamerData);
       } else {
         streamerData.push({
-          name: streamers[i],
+          name: streamer,
           status: 'Online',
           game: response.stream.game,
           image: response.stream.channel.logo
         });
       }
     });
-  }
+    return streamer;
+  });
   return streamerData;
-}
+};
 
 const renderList = (items) => {
-  //console.log('Inside function, outside loop');
-  // console.log(items.length);
   let html = '';
-  for(item in items) {
-    // console.log('Inside loop');
+  html = items.map((item) => {
     html += '<li class="list-group-item streamer">';
     let image = 'https://via.placeholder.com/50x50';
-    if (item.image === null) {
+    if (item.image !== null) {
       image = item.image;
     }
-    html += '<img src="' + image + '" class="img-responsive rounded-circle streamer-image"></img>';
-    html += '<span class="streamer-name">' + item.name + '</span>';
-    if (item.status = 'Online') {
+    html += `<img src="${image}" class="img-responsive rounded-circle streamer-image"></img>`;
+    html += `<span class="streamer-name">${item.name}</span>`;
+    if (item.status === 'Online') {
       html += '<span class="badge badge-success badge-pill status">Online</span>';
     } else {
       html += '<span class="badge badge-secondary badge-pill status">Offline</span>';
     }
+    html += '<span class="badge badge-success badge-pill status">Online</span>';
     if (item.game !== null) {
-      html += '<small class="text-secondary streamer-game">' + item.game + '</small>';
+      html += `<small class="text-secondary streamer-game">${item.game}</small>`;
     }
     html += '</li>';
-  };
+    return html;
+  });
+  // for (let item of items) {
+  //   html += '<li class="list-group-item streamer">';
+  //   let image = 'https://via.placeholder.com/50x50';
+  //   if (item.image === null) {
+  //     image = item.image;
+  //   }
+  //   html += '<img src="' + image + '" class="img-responsive rounded-circle streamer-image"></img>';
+  //   html += '<span class="streamer-name">' + item.name + '</span>';
+  //   if (item.status === 'Online') {
+  //     html += '<span class="badge badge-success badge-pill status">Online</span>';
+  //   } else {
+  //     html += '<span class="badge badge-secondary badge-pill status">Offline</span>';
+  //   }
+  //   html += '<span class="badge badge-success badge-pill status">Online</span>';
+  //   if (item.game !== null) {
+  //     html += '<small class="text-secondary streamer-game">' + item.game + '</small>';
+  //   }
+  //   html += '</li>';
+  // }
   $('#streamers').html(html);
-}
-  
-const streamerData = getStreamers(streamersToDisplay);
-console.log(JSON.stringify(streamerData));
-renderList(streamerData);
+};
+
+$(document).ready(() => {
+  const streamers = getStreamers(streamersToDisplay);
+  console.log(streamers);
+  renderList(streamers);
+});
