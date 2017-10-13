@@ -1,7 +1,7 @@
 feather.replace();
 
 // axios.defaults.baseUrl = 'https://wind-bow.glitch.me/twitch-api';
-baseUrl = 'https://wind-bow.glitch.me/twitch-api';
+const baseUrl = 'https://wind-bow.glitch.me/twitch-api';
 const streamersToDisplay = [
   "esl_sc2", 
   "OgamingSC2",
