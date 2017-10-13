@@ -22,6 +22,9 @@ html {
     padding: 15px;
     border-right: 0;
     border-left: 0; }
+    html .container .list-group .list-group-item .streamer-image {
+      height: 50px;
+      width: 50px; }
   html .container .btn-group .btn {
     width: 80px;
     border-radius: 45px; }
