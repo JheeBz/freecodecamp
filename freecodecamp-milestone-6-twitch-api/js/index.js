@@ -2,7 +2,6 @@ feather.replace();
 
 const baseUrl = 'https://wind-bow.glitch.me/twitch-api';
 const streamersToDisplay = [
-  'esl_sc2',
   'OgamingSC2',
   'cretetion',
   'freecodecamp',
@@ -10,6 +9,7 @@ const streamersToDisplay = [
   'habathcx',
   'RobotCaleb',
   'noobs2ninjas',
+  'esl_sc2'
 ];
 
 const getStreamers = (streamers, callback) => {
@@ -82,12 +82,12 @@ $(document).ready(() => {
     };
 
     const list = new List('streamer-list', listOptions);
-    list.sort('online', {order: 'desc'});
+    list.sort('streamer-status', {order: 'desc'});
 
     // $('.filter-online').click(() => {
     //   list.filter((item) => {
-    //     console.log(item.status);
-    //     if (item.status === 'online') {
+    //     console.log(item);
+    //     if (item.streamer-status === 'Online') {
     //       return true;
     //     }
     //     return false;
