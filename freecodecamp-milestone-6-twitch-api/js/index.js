@@ -57,12 +57,12 @@ const renderList = (items) => {
     html += `<img src="${image}" class="img-responsive rounded-circle streamer-image"></img>`;
     html += `<span class="streamer-name">${item.name}</span>`;
     if (item.status === 'Online') {
-      html += '<span class="badge badge-success badge-pill status">Online</span>';
+      html += '&nbsp;<span class="badge badge-success badge-pill streamer-status">Online</span>';
     } else {
-      html += '<span class="badge badge-secondary badge-pill status">Offline</span>';
+      html += '&nbsp;<span class="badge badge-secondary badge-pill streamer-status">Offline</span>';
     }
     if (item.game !== null) {
-      html += `<small class="text-secondary streamer-game">${item.game}</small>`;
+      html += `&nbsp;<small class="text-secondary streamer-game">${item.game}</small>`;
     }
     html += '</li>';
     return html;
@@ -74,5 +74,11 @@ $(document).ready(() => {
   getStreamers(streamersToDisplay, (streamers) => {
     console.log(streamers);
     renderList(streamers);
+
+    const listOptions = {
+      valueNames: [ 'streamer-name', 'streamer-status' ]
+    };
+    
+    const hackerList = new List('streamers', listOptions);
   });
 });

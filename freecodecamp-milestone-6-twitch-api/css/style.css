@@ -24,7 +24,8 @@ html {
     border-left: 0; }
     html .container .list-group .list-group-item .streamer-image {
       height: 50px;
-      width: 50px; }
+      width: 50px;
+      margin-right: 20px; }
   html .container .btn-group .btn {
     width: 80px;
     border-radius: 45px; }
