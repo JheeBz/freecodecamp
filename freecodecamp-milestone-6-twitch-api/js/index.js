@@ -2,24 +2,28 @@ feather.replace();
 
 const baseUrl = 'https://wind-bow.glitch.me/twitch-api';
 const streamersToDisplay = [
-  'esl_sc2', 
+  'esl_sc2',
   'OgamingSC2',
   'cretetion',
   'freecodecamp',
   'storbeck',
   'habathcx',
   'RobotCaleb',
-  'noobs2ninjas'
+  'noobs2ninjas',
 ];
 
 const getStreamers = (streamers, callback) => {
-  let streamerData = [];
-  let promises = [];
+  const streamerData = [];
+  const promises = [];
 
   for (let i = 0; i < streamers.length; i += 1) {
-    const req = $.getJSON(`${baseUrl}/streams/${streamers[i]}?callback=?`).done((response) => {
-      // console.log(response);
-      if (response.stream === null) {
+    const url = `${baseUrl}/streams/${streamers[i]}?callback=?`;
+    const req = $.getJSON(url).done((response) => {
+      console.log(url);
+      console.log(response);
+      if (response.hasOwnProperty('status')) {
+        console.log(`Error retrieving streamer:${streamers[i]}`);
+      } else if (response.stream === null) {
         streamerData.push({
           name: streamers[i],
           status: 'Offline',
