@@ -19,10 +19,8 @@ const getStreamers = (streamers, callback) => {
   for (let i = 0; i < streamers.length; i += 1) {
     const url = `${baseUrl}/streams/${streamers[i]}?callback=?`;
     const req = $.getJSON(url).done((response) => {
-      console.log(url);
-      console.log(response);
       if (response.hasOwnProperty('status')) {
-        console.log(`Error retrieving streamer:${streamers[i]}`);
+        console.error(`Error retrieving streamer:${streamers[i]}`);
       } else if (response.stream === null) {
         streamerData.push({
           name: streamers[i],
@@ -50,6 +48,7 @@ const renderList = (items) => {
   let html = '';
   items.map((item) => {
     html += '<li class="list-group-item streamer">';
+    html += `<a href="https://go.twitch.tv/${item.name}" class="streamer-link" alt="${item.name} stream" target="_blank">`;
     let image = 'https://via.placeholder.com/50x50';
     if (item.image !== null) {
       image = item.image;
@@ -64,7 +63,7 @@ const renderList = (items) => {
     if (item.game !== null) {
       html += `&nbsp;<small class="text-secondary streamer-game">${item.game}</small>`;
     }
-    html += '</li>';
+    html += '</a></li>';
     return html;
   });
   $('#streamers').html(html);
@@ -72,11 +71,10 @@ const renderList = (items) => {
 
 $(document).ready(() => {
   getStreamers(streamersToDisplay, (streamers) => {
-    console.log(streamers);
     renderList(streamers);
 
     const listOptions = {
-      valueNames: [ 'streamer-name', 'streamer-status' ]
+      valueNames: ['streamer-name', 'streamer-status']
     };
     
     const hackerList = new List('streamers', listOptions);
