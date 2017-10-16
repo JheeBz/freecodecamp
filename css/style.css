@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-color: rgba(0,0,0,0.05);
   height: 100%;
   padding-top: 50px;
   position: relative;
