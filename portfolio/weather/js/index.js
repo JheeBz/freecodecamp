@@ -1,5 +1,5 @@
 // feather.replace();
-const endpoint = 'https://fcc-weather-api.glitch.me';
+const endpoint = 'http://fcc-weather-api.glitch.me';
 let weatherInfo;
 let international = true;
 
